@@ -8,6 +8,10 @@ import datetime
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/home')
+def home():
+    return "Hello World"
+
 @app.route('/', methods=['POST'])
 def index():
     res = request.json
